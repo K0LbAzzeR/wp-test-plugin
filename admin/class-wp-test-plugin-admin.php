@@ -16,6 +16,7 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the admin-specific stylesheet and JavaScript.
  *
+ * @since             1.0.0
  * @package           Wp_Test_Plugin
  * @subpackage        Wp_Test_Plugin/admin/partials
  * @author            Еремин Алексей aka K0Lb@zzeR <javasc@yandex.ru>
