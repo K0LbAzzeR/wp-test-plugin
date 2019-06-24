@@ -1,8 +1,6 @@
 <?php
 
 /**
- * Fired during plugin activation
- *
  * @link              https://github.com/K0LbAzzeR/wp-test-plugin
  * @since             1.0.0
  *
@@ -11,8 +9,10 @@
  */
 
 /**
+ * Запускается при активации плагина.
  * Fired during plugin activation.
  *
+ * Этот класс определяет весь код, необходимый для запуска во время активации плагина.
  * This class defines all code necessary to run during the plugin's activation.
  *
  * @since             1.0.0

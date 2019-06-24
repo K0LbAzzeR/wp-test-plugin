@@ -1,11 +1,6 @@
 <?php
 
 /**
- * The file that defines the core plugin class
- *
- * A class definition that includes attributes and functions used across both the
- * public-facing side of the site and the admin area.
- *
  * @link              https://github.com/K0LbAzzeR/wp-test-plugin
  * @since             1.0.0
  *
@@ -14,11 +9,15 @@
  */
 
 /**
+ * Основной класс плагина.
  * The core plugin class.
  *
+ * Это используется для определения интернационализации, специфичных для администратора хуков
+ * и общедоступных хуков сайтов.
  * This is used to define internationalization, admin-specific hooks, and
  * public-facing site hooks.
  *
+ * Также поддерживает уникальный идентификатор этого плагина, а также текущую версию плагина.
  * Also maintains the unique identifier of this plugin as well as the current
  * version of the plugin.
  *
@@ -58,6 +57,7 @@ class Wp_Test_Plugin {
 	protected $version;
 
 	/**
+	 * Определите основные функциональные возможности плагина.
 	 * Define the core functionality of the plugin.
 	 *
 	 * Set the plugin name and the plugin version that can be used throughout the plugin.
@@ -79,9 +79,12 @@ class Wp_Test_Plugin {
 		$this->define_admin_hooks();
 		$this->define_public_hooks();
 
+		$this->plugin_custom_function();
+
 	}
 
 	/**
+	 * Загрузите необходимые зависимости для этого плагина.
 	 * Load the required dependencies for this plugin.
 	 *
 	 * Include the following files that make up the plugin:
@@ -100,23 +103,27 @@ class Wp_Test_Plugin {
 	private function load_dependencies() {
 
 		/**
+		 * Класс, отвечающий за управление действиями и фильтрами основного плагина.
 		 * The class responsible for orchestrating the actions and filters of the
 		 * core plugin.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-wp-test-plugin-loader.php';
 
 		/**
+		 * Класс, отвечающий за определение функциональности интернационализации плагина.
 		 * The class responsible for defining internationalization functionality
 		 * of the plugin.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-wp-test-plugin-i18n.php';
 
 		/**
+		 * Класс, отвечающий за определение всех действий, которые происходят в области администратора.
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-wp-test-plugin-admin.php';
 
 		/**
+		 * Класс, отвечающий за определение всех действий, которые происходят на общедоступной стороне сайта.
 		 * The class responsible for defining all actions that occur in the public-facing
 		 * side of the site.
 		 */
@@ -176,6 +183,7 @@ class Wp_Test_Plugin {
 	}
 
 	/**
+	 * Запустите загрузчик для выполнения всех хуков с WordPress.
 	 * Run the loader to execute all of the hooks with WordPress.
 	 *
 	 * @since    1.0.0
@@ -212,6 +220,16 @@ class Wp_Test_Plugin {
 	 * @return    string    The version number of the plugin.
 	 */
 	public function get_version() {
+		return $this->version;
+	}
+
+	/**
+	 * Plugin User Function
+	 *
+	 * @since     1.0.0
+	 * @return    
+	 */
+	public function plugin_custom_function() {
 		return $this->version;
 	}
 

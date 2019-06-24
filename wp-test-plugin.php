@@ -32,35 +32,43 @@ if ( ! defined( 'WPINC' ) ) {
 define( 'WP_TEST_PLUGIN_VERSION', '1.0.0' );
 
 /**
+ * Код, который запускается при активации плагина.
  * The code that runs during plugin activation.
  * This action is documented in includes/class-wp-test-plugin-activator.php
  */
 function activate_wp_test_plugin() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-wp-test-plugin-activator.php';
-	wp_test_plugin_Activator::activate();
+	Wp_Test_Plugin_Activator::activate();
 }
 
 /**
+ * Код, который запускается при деактивации плагина.
  * The code that runs during plugin deactivation.
  * This action is documented in includes/class-wp-test-plugin-deactivator.php
  */
 function deactivate_wp_test_plugin() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-wp-test-plugin-deactivator.php';
-	wp_test_plugin_Deactivator::deactivate();
+	Wp_Test_Plugin_Deactivator::deactivate();
 }
 
 register_activation_hook( __FILE__, 'activate_wp_test_plugin' );
 register_deactivation_hook( __FILE__, 'deactivate_wp_test_plugin' );
 
 /**
+ * Основной класс плагина, который используется для определения интернационализации,
+ * специфичных для администратора перехватчиков и общедоступных перехватчиков сайтов.
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
  */
 require plugin_dir_path( __FILE__ ) . 'includes/class-wp-test-plugin.php';
 
 /**
+ * Начинается выполнение плагина.
  * Begins execution of the plugin.
  *
+ * Поскольку все в плагине регистрируется с помощью хуков, 
+ * то запуск этого плагина с этого момента в файле
+ * не влияет на жизненный цикл страницы.
  * Since everything within the plugin is registered via hooks,
  * then kicking off the plugin from this point in the file does
  * not affect the page life cycle.
@@ -69,7 +77,7 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-wp-test-plugin.php';
  */
 function run_wp_test_plugin() {
 
-	$plugin = new wp_test_plugin();
+	$plugin = new Wp_Test_Plugin();
 	$plugin->run();
 
 }

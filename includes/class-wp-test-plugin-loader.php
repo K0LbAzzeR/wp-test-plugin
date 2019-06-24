@@ -1,8 +1,6 @@
 <?php
 
 /**
- * Register all actions and filters for the plugin
- *
  * @link              https://github.com/K0LbAzzeR/wp-test-plugin
  * @since             1.0.0
  *
@@ -11,8 +9,12 @@
  */
 
 /**
+ * Зарегистрируйте все действия и фильтры для плагина.
  * Register all actions and filters for the plugin.
  *
+ * Вести список всех хуков, которые зарегистрированы во всем плагине,
+ * и зарегистрировать их с помощью API WordPress.
+ * Вызовите функцию запуска, чтобы выполнить список действий и фильтров.
  * Maintain a list of all hooks that are registered throughout
  * the plugin, and register them with the WordPress API. Call the
  * run function to execute the list of actions and filters.

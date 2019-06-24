@@ -1,8 +1,6 @@
 <?php
 
 /**
- * The admin-specific functionality of the plugin.
- *
  * @link              https://github.com/K0LbAzzeR/wp-test-plugin
  * @since             1.0.0
  *
@@ -11,8 +9,11 @@
  */
 
 /**
+ * Админ-специфическая функциональность плагина.
  * The admin-specific functionality of the plugin.
  *
+ * Определяет имя плагина, версию и два примера хуков для того,
+ * чтобы поставить в очередь специфическую для администратора таблицу стилей и JavaScript.
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the admin-specific stylesheet and JavaScript.
  *
@@ -56,6 +57,7 @@ class Wp_Test_Plugin_Admin {
 	}
 
 	/**
+	 * Зарегистрируйте таблицы стилей для админки.
 	 * Register the stylesheets for the admin area.
 	 *
 	 * @since    1.0.0
@@ -79,6 +81,7 @@ class Wp_Test_Plugin_Admin {
 	}
 
 	/**
+	 * Зарегистрируйте JavaScript для админки.
 	 * Register the JavaScript for the admin area.
 	 *
 	 * @since    1.0.0
