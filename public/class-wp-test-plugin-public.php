@@ -14,6 +14,7 @@
 /**
  * The public-facing functionality of the plugin.
  *
+ * @since             1.0.0
  * @package           Wp_Test_Plugin
  * @subpackage        Wp_Test_Plugin/public
  * @author            Еремин Алексей aka K0Lb@zzeR <javasc@yandex.ru>
