@@ -3,11 +3,11 @@
 /**
  * Register all actions and filters for the plugin
  *
- * @link       http://example.com
- * @since      1.0.0
+ * @link              https://github.com/K0LbAzzeR/wp-test-plugin
+ * @since             1.0.0
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
+ * @package           Wp_Test_Plugin
+ * @subpackage        Wp_Test_Plugin/includes
  */
 
 /**
@@ -17,11 +17,12 @@
  * the plugin, and register them with the WordPress API. Call the
  * run function to execute the list of actions and filters.
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
- * @author     Your Name <email@example.com>
+ * @since             1.0.0
+ * @package           Wp_Test_Plugin
+ * @subpackage        Wp_Test_Plugin/includes
+ * @author            Еремин Алексей aka K0Lb@zzeR <javasc@yandex.ru>
  */
-class Plugin_Name_Loader {
+class Wp_Test_Plugin_Loader {
 
 	/**
 	 * The array of actions registered with WordPress.

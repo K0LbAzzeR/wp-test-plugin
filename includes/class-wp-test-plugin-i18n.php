@@ -6,11 +6,11 @@
  * Loads and defines the internationalization files for this plugin
  * so that it is ready for translation.
  *
- * @link       http://example.com
- * @since      1.0.0
+ * @link              https://github.com/K0LbAzzeR/wp-test-plugin
+ * @since             1.0.0
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
+ * @package           Wp_Test_Plugin
+ * @subpackage        Wp_Test_Plugin/includes
  */
 
 /**
@@ -19,12 +19,12 @@
  * Loads and defines the internationalization files for this plugin
  * so that it is ready for translation.
  *
- * @since      1.0.0
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
- * @author     Your Name <email@example.com>
+ * @since             1.0.0
+ * @package           Wp_Test_Plugin
+ * @subpackage        Wp_Test_Plugin/includes
+ * @author            Еремин Алексей aka K0Lb@zzeR <javasc@yandex.ru>
  */
-class Plugin_Name_i18n {
+class Wp_Test_Plugin_i18n {
 
 
 	/**
@@ -35,7 +35,7 @@ class Plugin_Name_i18n {
 	public function load_plugin_textdomain() {
 
 		load_plugin_textdomain(
-			'plugin-name',
+			'wp-test-plugin',
 			false,
 			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
 		);
