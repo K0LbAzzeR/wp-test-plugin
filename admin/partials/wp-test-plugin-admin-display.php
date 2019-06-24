@@ -5,11 +5,11 @@
  *
  * This file is used to markup the admin-facing aspects of the plugin.
  *
- * @link       http://example.com
- * @since      1.0.0
+ * @link              https://github.com/K0LbAzzeR/wp-test-plugin
+ * @since             1.0.0
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/admin/partials
+ * @package           Wp_Test_Plugin
+ * @subpackage        Wp_Test_Plugin/admin/partials
  */
 ?>
 
